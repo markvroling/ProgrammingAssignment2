@@ -21,7 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSole Will cache the iverse of a given matrix (if it isn't cached yet)
+## cacheSole will cache the iverse of a given matrix (if it isn't cached yet)
 ## if it's cached yet, it will return the inverse matrix. 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
@@ -31,7 +31,7 @@ cacheSolve <- function(x, ...) {
         message("getting cached data")
         return(i)
     } else {
-        ##if inverse isn't cached yet, inverse will be calculated, cached and returned
+        ##if inverse isn't cached, inverse matrix will be calculated, cached and returned
         i <- solve(x$get())
         x$setinverse(i)
         return(i)
